@@ -14,7 +14,10 @@ export let cartSlice = createSlice(
                 localStorage.setItem("CART",JSON.stringify(state.cart))
                 
                 },
-            deleteCart: ( state ) => {
+            deleteCart: ( state, reqData ) => {
+                let {id} = reqData.payload;
+                state.cart=state.cart.filter((obj)=>obj.id!=id)
+                localStorage.setItem("CART",JSON.stringify(state.cart))
             
 
         },
