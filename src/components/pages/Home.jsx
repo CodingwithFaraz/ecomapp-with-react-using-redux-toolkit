@@ -35,7 +35,6 @@ function Home() {
     </div>
   );
 }
-
 function ProductCard({ data }) {
   let { title, price, thumbnail, description, id } = data;
 
